@@ -161,7 +161,13 @@ describe('Generate button — multiple selections (Issue #3)', () => {
 
   test('multiple items from the same tab all appear in the message', () => {
     // Write your test here
+    check('starter-soup' && 'starter-salad');
+    check('main-steak');
+    check('dessert-icecream');
+    click('generate-btn');
+    const msg = getMessage();
 
+    expect(msg).toBe(' Your meal: Soup, Salad, Steak, Icecream');
   });
 
 });
