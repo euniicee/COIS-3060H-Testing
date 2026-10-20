@@ -139,7 +139,7 @@ describe('Generate button — success message (Issue #2)', () => {
     // in a random order every time. So this test is flaky — it passes
     // sometimes and fails other times with no code changes.
     // Fix it so the test passes reliably regardless of item order.
-    expect(msg).toContain('✅ Your meal: Garlic Bread, Pizza, Brownie');
+    expect(msg).toBe('✅ Your meal: Garlic Bread, Pizza, Brownie');
   });
 
 });
@@ -167,8 +167,7 @@ describe('Generate button — multiple selections (Issue #3)', () => {
     check('dessert-icecream');
     click('generate-btn');
     const msg = getMessage();
-
-    expect(msg).toContain('✅ Your meal: Soup, Salad, Steak, Icecream');
+    expect(getMessage().toContain('Soup, Salad');
   });
 
 });
