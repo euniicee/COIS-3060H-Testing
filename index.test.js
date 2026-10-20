@@ -167,7 +167,7 @@ describe('Generate button — multiple selections (Issue #3)', () => {
     check('dessert-icecream');
     click('generate-btn');
     const msg = getMessage();
-    expect(getMessage().toContain('Soup, Salad');
+    expect(getMessage()).toContain('Soup, Salad');
   });
 
 });
